@@ -56,7 +56,7 @@ def DonationAnalytics(dataPath,percentilePath,outputPath):
                 newList.add(tranAMT)
                 Donation.update({DonationID:newList})
             # calculate the percentile, total amount, and total # of transactions from repeat donors
-            outputPer = calcPercentile(percentile, Donation.get(DonationID))
+            outputPer = dataFormat(calcPercentile(percentile, Donation.get(DonationID)))
             outputAmt = dataFormat(sum(Donation.get(DonationID)))
             outputTran = len(Donation.get(DonationID))
             output = DonationID + "|" + str(outputPer) + "|" + str(outputAmt) + "|" + str(outputTran)
@@ -66,7 +66,7 @@ def DonationAnalytics(dataPath,percentilePath,outputPath):
         
     inputFile.close()
     outputFile.close()
-    print("\ndata process complete")
+    print("\ndata process complete\n")
 
 # function to calculate the percentile for a given sorted list
 def calcPercentile(percentile, sortedList):
