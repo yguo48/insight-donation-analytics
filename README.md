@@ -19,7 +19,8 @@ This project is the implementation of InsightDataScience's coding challenge "Don
 
 # Code implementation
 1. data_validation.py is screening the data per requirement of this project. Transaction that has invalid input will be ignored in the data processing
-2. Donation-analytics.py is the main coding file that conducts the data analysis. 
+2. Donation-analytics.py is the main coding file that conducts the data analysis.
+3. python modules needed: math, datetime, sys, sortedcontainers
 
 
 # Repo directory structure
